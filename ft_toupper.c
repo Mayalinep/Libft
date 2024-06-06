@@ -6,11 +6,11 @@
 /*   By: mpelage <mpelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 21:32:57 by maya              #+#    #+#             */
-/*   Updated: 2024/05/25 17:07:27 by mpelage          ###   ########.fr       */
+/*   Updated: 2024/05/28 15:53:48 by mpelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

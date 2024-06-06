@@ -6,11 +6,11 @@
 /*   By: mpelage <mpelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 19:27:50 by mpelage           #+#    #+#             */
-/*   Updated: 2024/05/25 17:08:13 by mpelage          ###   ########.fr       */
+/*   Updated: 2024/06/03 19:18:41 by mpelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -26,6 +26,10 @@ char	*ft_strrchr(const char *s, int c)
 			last = (char *)&s[i];
 		}
 		i++;
+	}
+	if ((char)c == '\0')
+	{
+		return ((char *)&s[i]);
 	}
 	return (last);
 }

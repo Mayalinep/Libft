@@ -6,13 +6,11 @@
 /*   By: mpelage <mpelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 13:08:09 by maya              #+#    #+#             */
-/*   Updated: 2024/05/25 17:04:54 by mpelage          ###   ########.fr       */
+/*   Updated: 2024/06/02 15:03:51 by mpelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {
@@ -23,11 +21,4 @@ int	ft_isalnum(int c)
 	}
 	else
 		return (0);
-}
-
-int	main(int argc, char **argv)
-{
-	if (argc != 2)
-		return (0);
-	printf("%d", ft_isalnum(argv[1][0]));
 }

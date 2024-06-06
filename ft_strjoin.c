@@ -6,7 +6,7 @@
 /*   By: mpelage <mpelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 14:34:59 by mpelage           #+#    #+#             */
-/*   Updated: 2024/06/02 11:29:13 by mpelage          ###   ########.fr       */
+/*   Updated: 2024/06/02 15:26:57 by mpelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str = (char *)malloc(len * sizeof(char));
 	if (!str)
 		return (NULL);
-	ft_srlcpy(str, s1, ft_strlen(s1) + 1);
+	ft_strlcpy(str, s1, ft_strlen(s1) + 1);
 	ft_strlcat(str, s2, len);
 	return (str);
 }

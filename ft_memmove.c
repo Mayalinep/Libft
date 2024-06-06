@@ -6,11 +6,11 @@
 /*   By: mpelage <mpelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 20:23:39 by maya              #+#    #+#             */
-/*   Updated: 2024/05/25 17:32:06 by mpelage          ###   ########.fr       */
+/*   Updated: 2024/05/28 17:54:36 by mpelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	const char	*s = (const char *)src;
 	size_t		i;
 
+	if (!dst && !src)
+		return (NULL);
 	d = (char *)dst;
 	i = 0;
 	if (d < s)

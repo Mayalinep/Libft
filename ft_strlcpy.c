@@ -6,11 +6,11 @@
 /*   By: mpelage <mpelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 21:13:59 by maya              #+#    #+#             */
-/*   Updated: 2024/05/25 17:07:11 by mpelage          ###   ########.fr       */
+/*   Updated: 2024/06/02 15:25:33 by mpelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t len)
 {
@@ -36,15 +36,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t len)
 	}
 	return (i);
 }
-/*
-
-#include <stdio.h>
-#include <stdlib.h>
-
-int	main(int argc, char **argv)
-{
-	if(argc != 4)
-		return (0);
-	printf("%zu\n", ft_strlcpy(argv[1], argv[2], atoi(argv[3])));
-}
-*/

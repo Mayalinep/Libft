@@ -6,14 +6,12 @@
 /*   By: mpelage <mpelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 14:54:38 by mpelage           #+#    #+#             */
-/*   Updated: 2024/05/25 17:29:40 by mpelage          ###   ########.fr       */
+/*   Updated: 2024/06/02 15:43:06 by mpelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-/*The ft_memchr function searches for the first occurrence of
-a specific character in a given memory area.*/
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t			i;
@@ -23,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	ptr = (unsigned char *)s;
 	cc = (unsigned char)c;
 	i = 0;
-	while (ptr[i] && i < n)
+	while (i < n)
 	{
 		if (ptr[i] == cc)
 			return ((void *)&ptr[i]);

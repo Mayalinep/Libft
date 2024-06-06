@@ -6,13 +6,13 @@
 /*   By: mpelage <mpelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 17:25:48 by mpelage           #+#    #+#             */
-/*   Updated: 2024/06/02 11:23:06 by mpelage          ###   ########.fr       */
+/*   Updated: 2024/06/03 18:11:55 by mpelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(const char *s, char sep)
+static int	count_slices(const char *s, char sep)
 {
 	int	count;
 
@@ -28,16 +28,42 @@ int	count_words(const char *s, char sep)
 	}
 	return (count);
 }
-static void	cut_place(char **tab, const char *s, char sep)
+
+static void	place_slices(char **tab, char const *s, char sep)
+{
+	char		**res;
+	char const	*tmp;
+
+	res = tab;
+	tmp = s;
+	while (*s)
+	{
+		while (*s == sep)
+		{
+			s++;
+			tmp = s;
+		}
+		while (*tmp && *tmp != sep)
+			tmp++;
+		if (*tmp == sep || tmp > s)
+		{
+			*res = ft_substr(s, 0, tmp - s);
+			s = tmp;
+			res++;
+		}
+	}
+	*res = NULL;
+}
+
+char	**ft_split(char const *s, char sep)
 {
 	char	**res;
 
-	res = tab;
-	while (*s)
-	{
-	}
-}
-
-char	**ft_split(char const *s, char c)
-{
+	if (!s)
+		return (NULL);
+	res = (char **)malloc((count_slices(s, sep) + 1) * sizeof(char *));
+	if (!res)
+		return (NULL);
+	place_slices(res, s, sep);
+	return (res);
 }

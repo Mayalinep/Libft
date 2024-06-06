@@ -6,13 +6,11 @@
 /*   By: mpelage <mpelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:09:29 by maya              #+#    #+#             */
-/*   Updated: 2024/05/25 17:04:57 by mpelage          ###   ########.fr       */
+/*   Updated: 2024/05/28 15:51:35 by mpelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
