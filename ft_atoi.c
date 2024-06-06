@@ -6,11 +6,11 @@
 /*   By: mpelage <mpelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 15:13:14 by mpelage           #+#    #+#             */
-/*   Updated: 2024/05/25 16:08:10 by mpelage          ###   ########.fr       */
+/*   Updated: 2024/05/28 15:49:45 by mpelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
